@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.wrapper {
+    width: 620px;
+    padding: 35px 35px;
+    background-color: #ffffff;
+    border: 2px solid #cbcbcb;
+    border-radius: 8px;
+}
+
+.wrapper_head {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed grey;
+}
+
+.wrapper_head_title {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+.wrapper_head_sub-title {
+    font-size: 18px;
+}
+
+#point {
+    font-size: 20px;
+    font-weight: 600;
+    color: orange;
+    text-decoration: underline;
+    display: block;
+    margin-top: 10px;
+}
+
+.wrapper_body {
+    padding: 15px 30px 20px 30px;
+    border: 2px solid #e8e8e8;
+}
+
+.wrapper_body_title {
+    height: 28px;
+    padding: 0 10px 0 10px;
+    margin: 10px 0 20px 0;
+    background-color: #e8e8e8;
+}
+
+.wrapper_body_content #highlight {
+    font-weight: 700;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.wrapper_body_content .tag-highlight {
+    font-weight: bold;
+    color: indianred;
+}
+
+.wrapper_body_weather {
+    color: #9f9f9f;
+    text-align: right;
+    font-size: 15px;
+}
+
+/* navbar 추가 */
+.header {
+    border-bottom: 1px solid grey;
+}
+
+.header_inner {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    width: 100px;
+    height: 80px;
+    padding-top: 22px;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: orange;
+}
+
+.menu {
+    float: left;
+    width: calc(100% - 200px);
+    height: 80px;
+    text-align: center;
+}
+
+.menu_ul {
+    display: inline-block;
+}
+
+.menu_ul li {
+    float: left;
+    list-style: none;
+}
+
+.menu_ul li a {
+    padding: 29px 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+.menu_ul li a:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+.user {
+    float: left;
+    width: 100px;
+    height: 80px;
+    padding-top: 23px;
+}
+
+.clearfix {
+    clear: both;
+}
