@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 3px solid skyblue;
+    padding: 10px;
+    position: relative;
+}
+
+.wrapper {
+    border: 3px solid blue;
+    padding: 10px;
+    position: relative;
+}
+
+.item {
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+    position: absolute; /* 부모 중 relative가 적용된 요소가 없음 -> body를 기준 */
+    top: 10px;
+    left: 0;
+}
