@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    width: 200px;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: #123ecf;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    transition: width 0.5s ease-in-out 0.5s, background-color 0.5s ease-in-out;
+}
+
+button:hover {
+    width: 320px;
+    background-color: #002398;
+}
