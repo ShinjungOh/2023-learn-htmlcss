@@ -58,12 +58,14 @@ html, body {
     font-size: 22px;
     font-weight: 500;
     opacity: 0;
+    transform: translateY(40px);
 }
 
 .textBox_price {
     font-size: 16px;
     font-weight: 400;
     opacity: 0;
+    transform: translateY(40px);
 }
 
 .item:after {
@@ -90,10 +92,12 @@ html, body {
 
 .item:hover .textBox_name {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .item:hover .textBox_price {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .item:after,
@@ -102,3 +106,8 @@ html, body {
 .item .textBox_price {
     transition: all 0.4s ease-in-out;
 }
+
+.item .textBox_price {
+    transition: all 0.4s ease-in-out 0.15s;
+}
+
