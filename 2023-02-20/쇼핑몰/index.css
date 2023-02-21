@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Gowun Dodum', sans-serif;
 }
 
 html, body {
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .mainBanner {
@@ -13,6 +20,7 @@ html, body {
     background-image: url("./img/banner.jpg");
     background-size: cover;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -39,67 +47,69 @@ html, body {
     }
 }
 
-.itemSection {
+.container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.itemSection {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 10px;
     margin-top: 25px;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 .menuWrap {
-    width: 200px;
-    margin: 0 12px 10px 10px;
+    width: 180px;
+    padding: 0 15px 10px 0;
 }
 
 .menuList {
-    width: 180px;
-    height: 210px;
     padding: 20px;
-    margin: 0 0 10px 0;
+    margin: 0;
     background-color: orange;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .menuItem {
-    width: 100%;
-    padding: 10px;
     color: white;
     list-style: none;
+}
+
+.menuItem a {
+    display: block;
+    padding: 10px;
     cursor: pointer;
+    transition: all 0.12s ease-in-out;
 }
 
 .addItem {
     width: 100%;
     padding: 10px 30px;
+    margin-top: 10px;
     background-color: black;
     color: white;
     border: 1px solid black;
     font-size: 16px;
     text-align: start;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .addItem .arrow {
-    padding-left: 5px;
-}
-
-.addItem:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    transition: 0.4s ease-in-out 0.15s;
-}
-
-.addItem:hover .arrow {
-    transform: translateX(30px);
+    padding-left: 10px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 
 .itemWrap {
+    width: calc(100% - 180px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -139,12 +149,12 @@ html, body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    z-index: 3;
 }
 
 .textBox p {
     color: white;
     margin: 5px 0 0;
-    z-index: 3;
 }
 
 .textBox_name {
@@ -174,25 +184,6 @@ html, body {
     opacity: 0;
 }
 
-.item:hover:after {
-    opacity: 1;
-}
-
-.item:hover .imgBox img {
-    transform: scale(1.1);
-    filter: blur(3px);
-}
-
-.item:hover .textBox_name {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.item:hover .textBox_price {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .item:after,
 .item .imgBox img,
 .item .textBox_name,
@@ -204,3 +195,167 @@ html, body {
     transition: all 0.4s ease-in-out 0.15s;
 }
 
+@media screen and (max-width: 767px) {
+    /* mobile */
+    .mainBanner {
+        height: 160px;
+    }
+
+    .mainBanner .text {
+        font-size: 26px;
+    }
+
+    .itemSection {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menuWrap {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menuList {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .menuItem a {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    .addItem {
+        display: none;
+    }
+
+    .itemWrap {
+        width: 100%;
+        margin-top: 12px;
+        padding: 0 10px
+    }
+
+    .item {
+        width: calc(50% - 7px);
+        height: auto;
+        aspect-ratio: unset;
+        overflow: hidden;
+        border: 1px solid #dddddd;
+    }
+
+    .imgBox {
+        aspect-ratio: 6/5;
+    }
+
+    .item:after {
+        display: none;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        padding: 5px 15px 15px 15px;
+        position: relative;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox_name {
+        font-size: 18px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .textBox_price {
+        font-size: 12px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* tablet */
+    .item {
+        width: calc(50% - 7px);
+        height: auto;
+        aspect-ratio: unset;
+        overflow: hidden;
+        border: 1px solid #dddddd;
+    }
+
+    .imgBox {
+        aspect-ratio: 6/5;
+    }
+
+    .item:after {
+        display: none;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        padding: 5px 15px 15px 15px;
+        position: relative;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox_name {
+        font-size: 18px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .textBox_price {
+        font-size: 12px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* PC */
+    .menuItem a:hover {
+        background-color: #ff9100;
+        border-radius: 5px;
+        padding-left: 17px;
+    }
+
+    .addItem:hover {
+        background-color: white;
+        color: #313131;
+        border: 1px solid black;
+    }
+
+    .addItem:hover .arrow {
+        transform: translateX(30px);
+    }
+
+    .item:hover:after {
+        opacity: 1;
+    }
+
+    .item:hover .imgBox img {
+        transform: scale(1.1);
+        filter: blur(3px);
+    }
+
+    .item:hover .textBox_name {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .item:hover .textBox_price {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
