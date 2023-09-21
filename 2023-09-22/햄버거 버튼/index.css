@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.icon_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.icon {
+    color: black;
+}
+
+.icon_dot {
+    color: red;
+    font-size: 38px;
+}
+
+.view_menu {
+    position: relative;
+    width: 79px;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.view_menu span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.view_menu:before,
+.view_menu:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.view_menu:before,
+.view_menu:after,
+.view_menu span {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: black;
+}
+
+.view_menu:before{
+    margin-top: -7px;
+}
+
+.view_menu:after{
+    margin-top: 7px;
+}
+
+.hidden_text{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    color: rgba(0, 0, 0, 0);
+}
